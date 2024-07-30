@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.LearningEnglish"
+        tools:targetApi="31">
+        <activity
+            android:name=".user.LauncherActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.LearningEnglish">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".main.MainActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.example.learningenglish.aichat.AIChatActivity"
+            android:launchMode="singleTask" />
+        <activity android:name="com.example.learningenglish.aichat.AIConversationListActivity" />
+        <activity android:name="com.example.learningenglish.word.allbook.AllBookSelectorActivity" />
+        <activity android:name="com.example.learningenglish.word.mybook.MyBookActivity" />
+        <activity android:name="com.example.learningenglish.word.plan.SetPlanningActivity" />
+        <activity android:name="com.example.learningenglish.word.study.StudyBookActivity" />
+        <activity android:name="com.example.learningenglish.word.study.ReviewActivity" />
+        <activity android:name="com.example.learningenglish.word.list.BookWordListActivity" />
+        <activity android:name="com.example.learningenglish.word.study.StudyPlanActivity" />
+        <activity android:name="com.example.learningenglish.user.userinfo.UserInfoActivity" />
+        <activity android:name="com.example.learningenglish.admin.main.AdminMainActivity"
+            android:launchMode="singleTask" />
+        <activity android:name="com.example.learningenglish.admin.word.WordBookManagerActivity" />
+        <activity android:name="com.example.learningenglish.admin.word.WordManagerActivity" />
+        <activity android:name="com.example.learningenglish.admin.user.UserManagerActivity" />
+    </application>
+
+</manifest>
